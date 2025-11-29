@@ -1,19 +1,21 @@
 #include<stdio.h>
-
-void printNaturalNumbers(int);
-
-int main() {
-    int n ;
-    printf("First  natural numbers:\n");
+void print_n(int);
+int main(){
+    int n;
+    printf("Enter the value of n: ");
     scanf("%d",&n);
-    printNaturalNumbers(n);
+    print_n(n);
     return 0;
+
 }
-void printNaturalNumbers(int n)
-{
-    printf("First %d natural numbers:\n",n);
-    for(int i = 1; i <= n; i++) {
-        printf("%d\n", i);
+void print_n(){
+ if(n>=0){
+       return;
+       
     }
-    printf("\n");
+    else{
+         print_n(n-1);
+         printf("%d ",n);
+        return;
+    }
 }
